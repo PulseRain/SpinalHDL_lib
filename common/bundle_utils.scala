@@ -87,7 +87,7 @@ object bundle_utils {
                 }
 
                 case x: BitVector   => {
-                    x := those_bits(index + x.getBitsWidth - 1 downto index)
+                    x := those_bits(index + x.getBitsWidth - 1 downto index).toDataType(x)
                     index += x.getBitsWidth
                 }
 
